@@ -1,1 +1,57 @@
-<script type="module" src="app.js"></script>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0f15">
+  <meta name="description" content="Simulador de temporada de Fórmula 1">
+  <title>F1 Simulator</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <strong><i>F1</i> SIMULATOR</strong>
+    <span id="season">TEMPORADA 1</span>
+    <span class="green">● SISTEMA ACTIVO</span>
+    <button class="action" id="saveTop">Guardar partida</button>
+    <button class="action red" id="nextTop">Iniciar temporada siguiente</button>
+  </header>
+
+  <div class="layout">
+    <nav aria-label="Menú principal">
+      <button class="active" data-view="home">Resumen</button>
+      <button data-view="session">Sesiones</button>
+      <button data-view="calendar">Calendario</button>
+      <button data-view="standings">Clasificaciones</button>
+      <button data-view="teams">Escuderías y coches</button>
+      <button data-view="drivers">Pilotos</button>
+      <button data-view="economy">Economía y desarrollo</button>
+      <button data-view="save">Guardados y ajustes</button>
+      <p>SIMULACIÓN DE MOTORSPORT<br>Temporada personalizada<br>Gestión y estrategia</p>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div>
+          <small>RACE CONTROL / SIMULATION ENGINE</small>
+          <h1>Centro de operaciones</h1>
+          <p>Gestiona tu campeonato, prepara sesiones y sigue la evolución de los equipos.</p>
+        </div>
+        <span class="tag">MODO ORGANIZADOR</span>
+      </section>
+
+      <div id="view">
+        <section class="panel">
+          <h2>Inicializando simulador…</h2>
+          <p class="muted">Cargando equipos, pilotos y calendario.</p>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
